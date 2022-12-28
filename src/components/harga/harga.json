@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_harga_hargas",
+  "info": {
+    "displayName": "harga"
+  },
+  "options": {},
+  "attributes": {
+    "nama": {
+      "type": "string",
+      "required": true
+    },
+    "jumlah": {
+      "type": "integer",
+      "required": true
+    },
+    "harga": {
+      "type": "integer",
+      "required": true
+    }
+  }
+}
