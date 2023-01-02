@@ -1,13 +1,11 @@
 "use strict";
 
 /**
- * produk controller
+ * A set of functions called "actions" for `barang`
  */
 
-const { createCoreController } = require("@strapi/strapi").factories;
-
-module.exports = createCoreController("api::produk.produk", ({ strapi }) => ({
-  async find(ctx) {
+module.exports = {
+  findAll: async (ctx, next) => {
     try {
       const data = await strapi.entityService.findMany("api::produk.produk", {
         fields: ["nama", "description"],
@@ -26,4 +24,4 @@ module.exports = createCoreController("api::produk.produk", ({ strapi }) => ({
       ctx.body = err;
     }
   },
-}));
+};
